@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- header -->
+        <header id="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">mail</span>
+                <span class="material-symbols-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span> Story
+                </div>
+                <span class="material-symbols-outlined " onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item"><a href="./index.html"><span
+                            class="material-symbols-outlined">dashboard</span>
+                        Dashboard</a> </li>
+                <li class="sidebar-list-item"><a href="#"><span class="material-symbols-outlined">inventory_2</span>
+                        Products</a></li>
+                <li class="sidebar-list-item"><a href="./add-product.html"><span class="material-symbols-outlined">add</span> Add
+                        Products</a></li>
+                <li class="sidebar-list-item"><a href="./users.html"><span class="material-symbols-outlined">groups</span> Users</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- main -->
+        <main id="main-container">
+            <div id="error-message"></div>
+            <div id="empty-message"></div>
+            <h1>Products</h1>
+            <div id="loading" class="loading">
+                <div class="points one"></div>
+                <div class="points two"></div>
+                <div class="points three"></div>
+            </div>
+            <!-- search + filter -->
+            <div class="control">
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search product">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="filter">
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="available">Available</option>
+                        <option value="not-available">Not Available</option>
+                    </select>
+
+                    <select id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="low">0-50</option>
+                        <option value="medium">50-100</option>
+                        <option value="high">100+</option>
+                    </select>
+                </div>
+            </div>
+            <!-- table -->
+            <div class="table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-body"></tbody>
+                </table>
+            </div>
+
+            <!-- buttons -->
+            <div class="pagination">
+                <button onclick="prevPage()">Previous</button>
+                <span id="page-number">1</span>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </main>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
+</body>
+
+</html>

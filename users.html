@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- header -->
+        <header id="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">mail</span>
+                <span class="material-symbols-outlined">account_circle</span>
+            </div>
+        </header>
+<!-- sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span> Story
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item"><a href="./index.html"><span
+                            class="material-symbols-outlined">dashboard</span> Dashboard</a></li>
+                <li class="sidebar-list-item"><a href="./products.html"><span
+                            class="material-symbols-outlined">inventory_2</span> Products</a></li>
+                <li class="sidebar-list-item"><a href="./add-product.html"><span
+                            class="material-symbols-outlined">add</span> Add Products</a></li>
+                <li class="sidebar-list-item active"><a href="#"><span class="material-symbols-outlined">groups</span>
+                        Users</a></li>
+            </ul>
+        </aside>
+
+        <main id="main-container" class="main-content">
+            <div class="main-title">
+                <h1>Users Management</h1>
+            </div>
+<!-- loading -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="points one"></div>
+                <div class="points two"></div>
+                <div class="points three"></div>
+            </div>
+<!-- error -->
+            <div id="error-message" style="color: red; text-align: center;"></div>
+            <!-- empty -->
+            <div id="empty-message" style="text-align: center;"></div>
+
+            <div class="table-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Avatar</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-body">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/users.js"></script>
+</body>
+
+</html>
