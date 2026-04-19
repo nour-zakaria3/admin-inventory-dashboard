@@ -17,7 +17,7 @@ function closeSidebar() {
 }
 
 // API
-const API_URL = "http://localhost:3000";
+const API_URL = "https://my-json-server.typicode.com/nour-zakaria3/admin-inventory-dashboard";
 
 
 //loading
