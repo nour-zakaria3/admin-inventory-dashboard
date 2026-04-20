@@ -17,7 +17,7 @@ function closeSidebar() {
 }
 
 // API
-const API_URL = "https://my-json-server.typicode.com/nour-zakaria3/admin-inventory-dashboard";
+const API_URL = "https://api.myjson.online/v1/records/cd921e69-55a9-4ebb-ad33-4b677dd53aa2";
 
 
 //loading
